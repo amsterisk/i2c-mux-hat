@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "i2c-mux-hat")(type "KiCad")(uri "${KIPRJMOD}/i2c-mux-hat.pretty")(options "")(descr "Project footprints"))
+)
