@@ -11,3 +11,8 @@
 (rule "Copper to unplated hole"
 	(constraint hole_clearance (min 0.3))
 	(condition "A.Pad_Type == 'NPTH, mechanical'"))
+
+(rule "Header GND pins solid"
+	# F.Cu between the 40-pin header's pins is too cut up for thermal spokes
+	(constraint zone_connection solid)
+	(condition "A.Type == 'Pad' && A.Parent.Reference == 'J1' && A.NetName == 'GND'"))
