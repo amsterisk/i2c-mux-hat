@@ -11,7 +11,8 @@ Status: **work in progress** — schematic done (ERC clean), PCB layout not star
 - **Per-channel voltage**: a 3-pin jumper selects 3.3 V or 5 V for that channel's pull-ups
   and connector power. The mux runs at 3.3 V and translates levels, so 5 V devices never
   reach the host's GPIO.
-- **Per-channel connectors**: RJ9 (4P4C) jack *and* a 0.1" 4-pin header footprint.
+- **Per-channel connectors**: keyed JST XH 4-pin (B4B-XH-A, vertical) *and* a 0.1" 4-pin header,
+  same pinout on both.
 - 2.2 kΩ pull-ups per channel (removable via solder jumper), suitable for a few metres of cable.
 - Per-channel resettable fuse on connector power and ESD clamp (USBLC6-2SC6) on SDA/SCL/V.
 - Optional mux reset from GPIO4 (solder jumper).
@@ -22,26 +23,25 @@ Example use: DDC/CI control of monitors (input switching, brightness) over HDMI'
 with one channel per monitor — every monitor answers on the same addresses (0x37/0x50), so
 each needs its own bus.
 
-## Connector pinouts
+## Connector pinout
 
-| RJ9 contact | Signal | | 0.1" header pin | Signal |
-|---|---|---|---|---|
-| 1 | SCL | | 1 | GND |
-| 2 | GND | | 2 | V (3.3/5 V) |
-| 3 | V (3.3/5 V) | | 3 | SDA |
-| 4 | SDA | | 4 | SCL |
+JST XH (J*x*01) and 0.1" header (J*x*02) share one pinout:
 
-RJ9 contact 1: plug held with latch underneath, contacts up, cable toward you → leftmost.
-**The RJ9 jacks are not telephone ports. Never connect them to a phone line.**
-
-### RJ9 → HDMI (DDC) cable
-
-| RJ9 | HDMI pin |
+| Pin | Signal |
 |---|---|
-| 1 SCL | 15 |
-| 2 GND | 17 (bridge to 20 / shell) |
-| 3 V | 18 (+5 V) |
-| 4 SDA | 16 |
+| 1 | GND |
+| 2 | V (3.3 or 5 V, per channel jumper) |
+| 3 | SDA |
+| 4 | SCL |
+
+### JST XH → HDMI (DDC) cable
+
+| XH pin | HDMI pin |
+|---|---|
+| 1 GND | 17 (bridge to 20 / shell) |
+| 2 V | 18 (+5 V) |
+| 3 SDA | 16 |
+| 4 SCL | 15 |
 
 Set that channel to **5 V**. Leave all other HDMI pins unconnected.
 
@@ -65,10 +65,29 @@ The board appears as one I2C device (0x70) on the host's bus on pins 3/5.
 - **Other boards**: use a device-tree overlay for `i2c-mux-pca954x`, or select channels
   from userspace by writing the channel bitmask to 0x70 before each transaction.
 
+## Building fabrication files
+
+```sh
+tools/export.sh            # version from `git describe`; refuses to build if ERC/DRC fail
+tools/export.sh v0.1       # explicit version
+tools/export.sh --allow-violations   # work-in-progress builds
+```
+
+Outputs land in `production/<version>/` (git-ignored; attach to a GitHub release):
+Gerber + drill zip (upload as-is to JLCPCB/PCBWay; the stencil is made from `F.Paste`),
+grouped BOM, JLCPCB-format BOM + placement file, schematic PDF, top/bottom 3D renders,
+and the ERC/DRC reports. Needs KiCad 9 (`kicad-cli`, or `kicad.kicad-cli` from the snap).
+
+Design rules target JLCPCB's standard 2-layer process (Board Setup → Constraints, plus
+`hardware/i2c-mux-hat.kicad_dru`): 0.15 mm track/clearance minimum, 0.6/0.3 mm vias,
+0.3 mm copper-to-edge. Net classes: *Default* 0.25 mm tracks; *Power* 0.5 mm for
++5V, +3.3V, GND and each channel's VCH/VOUT/VPU.
+
 ## Repository layout
 
 - `hardware/` — KiCad 9 project (`i2c-mux-hat.kicad_pro`); the 8 channels are one hierarchical
-  sheet (`channel.kicad_sch`) instanced 8 times. Project footprints in `i2c-mux-hat.pretty/`.
+  sheet (`channel.kicad_sch`) instanced 8 times.
+- `tools/export.sh` — builds fabrication and documentation outputs.
 - `LICENSE` — CERN-OHL-S-2.0.
 
 ## Licence
