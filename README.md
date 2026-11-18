@@ -7,14 +7,14 @@ Status: **work in progress** — schematic done (ERC clean), PCB routed (DRC cle
 
 ## Features
 
-- **TCA9548A** 8-channel I2C switch, address 0x70–0x77 (solder jumpers, default 0x70).
+- **TCA9548A** 8-channel I2C switch, address 0x70–0x77 (3-way DIP switch, default 0x70).
 - **Per-channel voltage**: a 3-pin jumper selects 3.3 V or 5 V for that channel's pull-ups
   and connector power. The mux runs at 3.3 V and translates levels, so 5 V devices never
   reach the host's GPIO.
 - **Per-channel connector**: keyed JST XH 4-pin (B4B-XH-A, vertical).
-- 2.2 kΩ pull-ups per channel (removable via solder jumper), suitable for a few metres of cable.
+- 2.2 kΩ pull-ups per channel (enabled by a shunt on a 2-pin header), suitable for a few metres of cable.
 - Per-channel resettable fuse on connector power and ESD clamp (USBLC6-2SC6) on SDA/SCL/V.
-- Optional mux reset from GPIO4 (solder jumper).
+- Optional mux reset from GPIO4 (2-pin header).
 - HAT form factor, 65 × 56.5 mm (no ID EEPROM; pins 27/28 unused).
 - **2×20 stacking header**: all 40 pins pass through to another board above.
 
@@ -48,16 +48,18 @@ Set that channel to **5 V**. Leave all other HDMI pins unconnected.
 
 | Ref | Default | Function |
 |---|---|---|
-| JPx01 (header) | no shunt | Channel x voltage: 1-2 = 3.3 V, 2-3 = 5 V, none = off |
-| JPx02 (solder) | bridged | Channel x pull-ups; cut to remove |
-| JP1 (solder) | open | Bridge to connect mux ~RESET to GPIO4 (pin 7) |
-| JP2–JP4 (solder) | GND | Address A0–A2; move to 3V3 for 0x71–0x77 |
+| JPx01 (1×3 header) | no shunt | Channel x voltage: 1-2 = 3.3 V, 2-3 = 5 V, none = off |
+| JPx02 (1×2 header) | shunt fitted | Channel x pull-ups; remove the shunt to disable |
+| JP1 (1×2 header) | open | Fit a shunt to connect mux ~RESET to GPIO4 (pin 7) |
+| SW1 (DIP-3, 1.27 mm) | all OFF | Address A0–A2; ON = 1, so 0x70 + A (0x70–0x77) |
+
+All jumpers are 2.54 mm pin headers taking standard shunts.
 
 ## Stacking
 
 J1 is a 2×20 stacking header (female, long pins through the board), so every GPIO passes
 through. A board above can share I2C (pins 3/5) as long as it avoids addresses 0x70–0x77
-(or move this board's address with JP2–JP4); GPIO4 is only used if JP1 is bridged; pins
+(or move this board's address with SW1); GPIO4 is only used if JP1 is bridged; pins
 27/28 are free for the upper board's ID EEPROM. Mechanically, the vertical XH plugs and
 their cables exit upwards, so a board above needs a tall spacer (about 20 mm or more);
 otherwise put this board at the top of the stack.
