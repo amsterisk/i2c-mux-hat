@@ -3,7 +3,7 @@
 An open-hardware 8-channel I2C multiplexer board for single-board computers with a
 Raspberry Pi-compatible 40-pin header (Raspberry Pi, Orange Pi, Banana Pi, ...).
 
-Status: **work in progress** — schematic done (ERC clean), PCB layout not started.
+Status: **work in progress** — schematic done (ERC clean), PCB placed, routing not started.
 
 ## Features
 
@@ -11,13 +11,11 @@ Status: **work in progress** — schematic done (ERC clean), PCB layout not star
 - **Per-channel voltage**: a 3-pin jumper selects 3.3 V or 5 V for that channel's pull-ups
   and connector power. The mux runs at 3.3 V and translates levels, so 5 V devices never
   reach the host's GPIO.
-- **Per-channel connectors**: keyed JST XH 4-pin (B4B-XH-A, vertical) *and* a 0.1" 4-pin header,
-  same pinout on both.
+- **Per-channel connector**: keyed JST XH 4-pin (B4B-XH-A, vertical).
 - 2.2 kΩ pull-ups per channel (removable via solder jumper), suitable for a few metres of cable.
 - Per-channel resettable fuse on connector power and ESD clamp (USBLC6-2SC6) on SDA/SCL/V.
 - Optional mux reset from GPIO4 (solder jumper).
-- Optional Raspberry Pi HAT ID EEPROM footprint (not fitted by default).
-- HAT form factor, 65 × 56.5 mm.
+- HAT form factor, 65 × 56.5 mm (no ID EEPROM; pins 27/28 unused).
 
 Example use: DDC/CI control of monitors (input switching, brightness) over HDMI's DDC lines,
 with one channel per monitor — every monitor answers on the same addresses (0x37/0x50), so
@@ -25,7 +23,7 @@ each needs its own bus.
 
 ## Connector pinout
 
-JST XH (J*x*01) and 0.1" header (J*x*02) share one pinout:
+JST XH (J*x*01):
 
 | Pin | Signal |
 |---|---|
@@ -53,7 +51,6 @@ Set that channel to **5 V**. Leave all other HDMI pins unconnected.
 | JPx02 (solder) | bridged | Channel x pull-ups; cut to remove |
 | JP1 (solder) | open | Bridge to connect mux ~RESET to GPIO4 (pin 7) |
 | JP2–JP4 (solder) | GND | Address A0–A2; move to 3V3 for 0x71–0x77 |
-| JP5 (solder) | open | HAT EEPROM write-protect (only with EEPROM fitted) |
 
 ## Software
 

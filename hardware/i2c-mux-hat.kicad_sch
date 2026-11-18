@@ -2480,231 +2480,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Memory_EEPROM:24LC32"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -6.35 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "24LC32"
-				(at 1.27 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21072G.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "I2C Serial EEPROM, 32Kb, DIP-8/SOIC-8/TSSOP-8/DFN-8"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "I2C Serial EEPROM"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "DIP*W7.62mm* SOIC*3.9x4.9mm* TSSOP*4.4x3mm*P0.65mm* DFN*3x2mm*P0.5mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "24LC32_1_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "WP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -3191,17 +2966,6 @@
 		)
 		(uuid "7bf6aa89-9d80-4a81-a589-7437247914df")
 	)
-	(text "Optional Raspberry Pi HAT ID EEPROM (all DNP by default).\nFit U2, C3, R4, R5, JP5 for a spec-compliant HAT. Bridge JP5 to write-protect.\nOther hosts ignore pins 27/28."
-		(exclude_from_sim no)
-		(at 25.4 186 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "b1a02853-fb59-499a-a486-dc2b8800ec72")
-	)
 	(text "Host: any board with a Raspberry Pi-compatible 40-pin header\n(Raspberry Pi, Orange Pi, Banana Pi ...) with I2C on pins 3 (SDA) / 5 (SCL).\nCheck your board's pinout before fitting."
 		(exclude_from_sim no)
 		(at 25.4 125 0)
@@ -3223,6 +2987,14 @@
 			(justify left top)
 		)
 		(uuid "f8906755-e813-4a74-a891-3ab1903faff0")
+	)
+	(no_connect
+		(at 45.72 99.06)
+		(uuid "1c15c6af-a848-4331-b673-b6bad9c2aadc")
+	)
+	(no_connect
+		(at 58.42 99.06)
+		(uuid "4a6ca95f-4422-4d75-bc6a-53ac98d83bc1")
 	)
 	(no_connect
 		(at 45.72 104.14)
@@ -3318,16 +3090,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 172.72) (xy 53.34 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "039004bc-0ae5-43ed-b9a1-2e6141f3cfa8")
-	)
-	(wire
-		(pts
 			(xy 127 142.24) (xy 124.46 142.24)
 		)
 		(stroke
@@ -3398,16 +3160,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 172.72) (xy 45.72 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09adb22f-188f-48ee-9489-75ec4cfa4f7a")
-	)
-	(wire
-		(pts
 			(xy 142.24 99.06) (xy 139.7 99.06)
 		)
 		(stroke
@@ -3425,16 +3177,6 @@
 			(type default)
 		)
 		(uuid "0ac5b97e-0165-4763-9d35-e7b9fd56abb5")
-	)
-	(wire
-		(pts
-			(xy 76.2 172.72) (xy 78.74 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0cad3f98-5102-4377-a240-256eb0d8cbd3")
 	)
 	(wire
 		(pts
@@ -3528,16 +3270,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 180.34) (xy 95.25 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "309e69e5-4ff4-477e-b549-4a247659acbb")
-	)
-	(wire
-		(pts
 			(xy 162.56 86.36) (xy 165.1 86.36)
 		)
 		(stroke
@@ -3555,26 +3287,6 @@
 			(type default)
 		)
 		(uuid "379e0bec-2edc-4d22-b507-a6f80f78440f")
-	)
-	(wire
-		(pts
-			(xy 76.2 167.64) (xy 78.74 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39a05bfc-f4f0-4dc2-9f4e-0fe7a10d8e9f")
-	)
-	(wire
-		(pts
-			(xy 58.42 99.06) (xy 60.96 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ad1ff3d-a444-45a6-8314-3f46f79a2ac4")
 	)
 	(wire
 		(pts
@@ -3615,16 +3327,6 @@
 			(type default)
 		)
 		(uuid "438940bc-7d5b-4991-b62c-64230c78000e")
-	)
-	(wire
-		(pts
-			(xy 66.04 162.56) (xy 66.04 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a4b7bb2-cf0b-43aa-a317-ef071cde843a")
 	)
 	(wire
 		(pts
@@ -3688,26 +3390,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 99.06) (xy 43.18 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "568ac1ff-0db6-4057-9aef-787fae48108c")
-	)
-	(wire
-		(pts
-			(xy 105.41 180.34) (xy 107.95 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a9d4300-5ef4-4d7c-92ec-43e505870884")
-	)
-	(wire
-		(pts
 			(xy 162.56 109.22) (xy 165.1 109.22)
 		)
 		(stroke
@@ -3755,16 +3437,6 @@
 			(type default)
 		)
 		(uuid "74a63343-2148-43f7-afed-8e91add49fdd")
-	)
-	(wire
-		(pts
-			(xy 66.04 177.8) (xy 66.04 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "754dd198-fe82-40e6-a346-6a7fe4719ded")
 	)
 	(wire
 		(pts
@@ -3828,16 +3500,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 167.64) (xy 53.34 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93ee6b59-fa5f-46de-a614-d8c7ee95313b")
-	)
-	(wire
-		(pts
 			(xy 215.9 49.53) (xy 213.36 49.53)
 		)
 		(stroke
@@ -3895,26 +3557,6 @@
 			(type default)
 		)
 		(uuid "ab8a4e42-a123-4316-b76c-a05a3f48d867")
-	)
-	(wire
-		(pts
-			(xy 76.2 170.18) (xy 78.74 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac042a13-c904-45b4-851f-48dfd52e8951")
-	)
-	(wire
-		(pts
-			(xy 55.88 170.18) (xy 53.34 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acef7954-b97d-4a41-8499-3f2a5de39f56")
 	)
 	(wire
 		(pts
@@ -4008,16 +3650,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 167.64) (xy 45.72 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfd1d12f-190b-4c1a-8f8f-88bb379999d6")
-	)
-	(wire
-		(pts
 			(xy 58.42 81.28) (xy 60.96 81.28)
 		)
 		(stroke
@@ -4068,16 +3700,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 157.48) (xy 93.98 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c87a0135-3860-48c1-85ca-9ee6996bf347")
-	)
-	(wire
-		(pts
 			(xy 152.4 114.3) (xy 152.4 116.84)
 		)
 		(stroke
@@ -4085,16 +3707,6 @@
 			(type default)
 		)
 		(uuid "c972a436-897e-4aab-b977-347af571cb2c")
-	)
-	(wire
-		(pts
-			(xy 101.6 162.56) (xy 101.6 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce12f727-435e-4226-842d-186695b8b7a2")
 	)
 	(wire
 		(pts
@@ -4168,16 +3780,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 157.48) (xy 101.6 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ddcd7167-ae77-48e7-bfae-14396bf13dd6")
-	)
-	(wire
-		(pts
 			(xy 45.72 66.04) (xy 43.18 66.04)
 		)
 		(stroke
@@ -4238,16 +3840,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 162.56) (xy 93.98 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f92378f1-4e38-484b-a553-483cd0711a63")
-	)
-	(wire
-		(pts
 			(xy 45.72 86.36) (xy 43.18 86.36)
 		)
 		(stroke
@@ -4295,16 +3887,6 @@
 			(justify right bottom)
 		)
 		(uuid "117ed6d9-2f3f-4279-b163-aa1ef5b9485a")
-	)
-	(label "ID_WP"
-		(at 78.74 172.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1585696f-e275-4dfa-a5fe-e00dcd1a35f6")
 	)
 	(label "~{RST}"
 		(at 121.92 55.88 270)
@@ -4416,16 +3998,6 @@
 		)
 		(uuid "4fdcb199-0bd8-431a-b4c2-58b67d48af37")
 	)
-	(label "ID_SD"
-		(at 43.18 99.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5447e3fe-f251-4440-8526-55baa111f705")
-	)
 	(label "A2"
 		(at 167.64 148.59 270)
 		(effects
@@ -4436,26 +4008,6 @@
 		)
 		(uuid "622861f8-93f3-4069-9ebc-f7f95b616480")
 	)
-	(label "ID_SC"
-		(at 78.74 170.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "63ae6eee-a114-44f6-8077-33390c790d78")
-	)
-	(label "ID_SD"
-		(at 78.74 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "66996f33-95b3-437f-91e4-44a377fbfc98")
-	)
 	(label "SD3"
 		(at 213.36 90.17 180)
 		(effects
@@ -4465,16 +4017,6 @@
 			(justify right bottom)
 		)
 		(uuid "72c67c3e-0f3b-491f-ba05-0a7bb05469a3")
-	)
-	(label "ID_SC"
-		(at 60.96 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7317a663-e969-413f-a12b-b031c00ad333")
 	)
 	(label "SC7"
 		(at 165.1 106.68 0)
@@ -4556,16 +4098,6 @@
 		)
 		(uuid "8d05f7c4-eead-4515-b3c9-b0327b520836")
 	)
-	(label "ID_SC"
-		(at 101.6 165.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8dcf637f-4179-4c69-b466-423dd331632a")
-	)
 	(label "SC2"
 		(at 165.1 81.28 0)
 		(effects
@@ -4625,16 +4157,6 @@
 			(justify right bottom)
 		)
 		(uuid "9e77157d-ebb6-42c6-b053-df6d3f205889")
-	)
-	(label "ID_WP"
-		(at 95.25 180.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a843306f-128e-474e-8558-5ac9ca7015e6")
 	)
 	(label "A1"
 		(at 139.7 99.06 180)
@@ -4816,83 +4338,6 @@
 		)
 		(uuid "fb7823a7-7f50-4b17-a9fb-cc2aed0e4227")
 	)
-	(label "ID_SD"
-		(at 93.98 165.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "feaaa5d3-fdc9-4535-b674-4be79b47316a")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 101.6 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "04f3f543-07ee-4153-8169-544f515cb855")
-		(property "Reference" "R5"
-			(at 104.1 158.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3.9k"
-			(at 104.1 161.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 101.6 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e944aa8e-fa23-4ffc-b940-29c82bb310e9")
-		)
-		(pin "2"
-			(uuid "cc67d4d4-f8bf-4a72-9c39-e1bb26603dfe")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:+3.3V")
 		(at 43.18 86.36 90)
@@ -4952,70 +4397,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "#PWR0100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 107.95 180.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "0ea14d42-bd44-448c-bb8f-e0bbb38453f2")
-		(property "Reference" "#PWR0400"
-			(at 110.45 178.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 110.45 181.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 107.95 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 107.95 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f127153a-eedd-4135-a5e1-51b419fa4902")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0400")
 					(unit 1)
 				)
 			)
@@ -5272,70 +4653,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "#PWR0010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 93.98 154.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "3a045c51-83aa-4814-991d-966c8b17b4f1")
-		(property "Reference" "#PWR0380"
-			(at 96.48 153.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 96.48 156.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 93.98 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 93.98 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8989d46d-1d67-41bf-a4b7-944f07a6292c")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0380")
 					(unit 1)
 				)
 			)
@@ -5657,70 +4974,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "#FLG0070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 66.04 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "4efff4e5-bb75-4404-b990-aeb7b8daefe2")
-		(property "Reference" "#PWR0310"
-			(at 68.54 158.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 68.54 161.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dde8af75-726c-4bd1-b3ee-d3e8cd952776")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0310")
 					(unit 1)
 				)
 			)
@@ -6124,70 +5377,6 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 45.72 165.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "60bbac93-4bdb-42b7-b191-8091dd1c812c")
-		(property "Reference" "#PWR0360"
-			(at 48.22 163.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 48.22 166.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f550f820-12da-49c5-aa16-4f47ef9ec229")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0360")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
 		(at 190.5 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6448,70 +5637,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "88802557-a8bd-432c-9f8c-4308d72996e3")
-		(property "Reference" "#PWR0320"
-			(at 68.54 178.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 68.54 181.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e8dbbe11-57da-4818-9b6f-fa3e6efd89c4")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0320")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 60.96 88.9 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6569,73 +5694,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "#PWR0110")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 45.72 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "8f7b54b3-c711-4178-ba67-13c131756a69")
-		(property "Reference" "C3"
-			(at 48.22 168.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100n"
-			(at 48.22 171.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "518a4af6-c779-489b-969a-5cf46d8b59eb")
-		)
-		(pin "2"
-			(uuid "0a4308e5-5a4c-4f1d-8140-6a9d6d19e4e3")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -6901,204 +5959,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "JP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 101.6 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "9ae07356-dc1d-4e5e-8c6c-88be96b2f10d")
-		(property "Reference" "JP5"
-			(at 104.1 178.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ID_WP"
-			(at 104.1 181.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 101.6 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "64521d16-e633-4256-9956-730d651691a1")
-		)
-		(pin "2"
-			(uuid "07434f12-87a7-4b98-8018-2cc8b0b26dad")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "JP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 93.98 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "9eb8b0dd-ed02-421b-81b5-56b707e7773e")
-		(property "Reference" "R4"
-			(at 96.48 158.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3.9k"
-			(at 96.48 161.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 93.98 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 93.98 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7f6f613-28dc-4490-b653-7a6bfe2b7d7b")
-		)
-		(pin "2"
-			(uuid "6459f20d-fbb6-4dcb-8b6e-a48a71cd9fad")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 101.6 154.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "9fc5985f-752a-4066-a6f4-026c4982f61e")
-		(property "Reference" "#PWR0390"
-			(at 104.1 153.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 104.1 156.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5fa3e27d-a21e-48dc-88a3-56f5ea261c04")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0390")
 					(unit 1)
 				)
 			)
@@ -7430,70 +6290,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 53.34 167.64 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "a6cbc06e-7982-4b95-886b-0f9ea53411a4")
-		(property "Reference" "#PWR0330"
-			(at 55.84 166.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 55.84 169.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d4e18ec9-4b3a-4cac-84e7-36d945a4ecf6")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0330")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 60.96 66.04 270)
 		(unit 1)
@@ -7623,134 +6419,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 53.34 170.18 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "b634bf99-8dff-4306-a1f4-97eddcee56d8")
-		(property "Reference" "#PWR0340"
-			(at 55.84 168.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 55.84 171.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4071c0cc-5136-4144-986b-02ec3ab8f632")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0340")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "b7b547b3-a4ca-4d15-b0f2-11f9188c7671")
-		(property "Reference" "#PWR0370"
-			(at 48.22 173.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 48.22 176.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c8464b52-79d5-412a-90b1-f63cab15cb1a")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0370")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 180.34 35.56 0)
 		(unit 1)
@@ -7809,91 +6477,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "#PWR0180")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Memory_EEPROM:24LC32")
-		(at 66.04 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "cd268088-de61-43ac-baf9-2528b40341b6")
-		(property "Reference" "U2"
-			(at 68.54 168.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "24C32"
-			(at 68.54 171.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 66.04 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d47b9faf-d03f-4131-a885-65ebfe8e1b66")
-		)
-		(pin "2"
-			(uuid "4eb33456-ce73-4899-ab71-1434f7a366b6")
-		)
-		(pin "3"
-			(uuid "724858c0-cdc4-4b02-bf8f-c99c800ce570")
-		)
-		(pin "8"
-			(uuid "0a43e339-73e7-43b6-8952-63786d4add82")
-		)
-		(pin "4"
-			(uuid "68473aa0-6fcd-4099-bc0e-788f069e2208")
-		)
-		(pin "5"
-			(uuid "5c31f862-6dd8-4536-b889-143ee5017d2c")
-		)
-		(pin "6"
-			(uuid "1be29e95-d27c-4a5d-8246-f0bf9ffb7b23")
-		)
-		(pin "7"
-			(uuid "076d3dab-33ce-452d-913d-fef9d0a29075")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -8398,70 +6981,6 @@
 			(project "i2c-mux-hat"
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 172.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "e8cf3987-403b-426b-9948-50b04e916e3e")
-		(property "Reference" "#PWR0350"
-			(at 55.84 171.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 55.84 174.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "97c7b852-9517-4da7-87dd-674556ab68e6")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407"
-					(reference "#PWR0350")
 					(unit 1)
 				)
 			)

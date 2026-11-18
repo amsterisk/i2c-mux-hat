@@ -1680,7 +1680,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "J01 JST XH (B4B-XH-A) and J02 0.1in header share one pinout:\n  1 GND, 2 V, 3 SDA, 4 SCL\nHDMI DDC cable (channel at 5 V): 1->17 (+20), 2->18, 3->16, 4->15."
+	(text "J01 JST XH (B4B-XH-A) pinout:\n  1 GND, 2 V, 3 SDA, 4 SCL\nHDMI DDC cable (channel at 5 V): 1->17 (+20), 2->18, 3->16, 4->15."
 		(exclude_from_sim no)
 		(at 50.8 118 0)
 		(effects
@@ -1754,16 +1754,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 93.98) (xy 162.56 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f83cd47-9b52-4409-97cb-26ba856cd34c")
-	)
-	(wire
-		(pts
 			(xy 85.09 63.5) (xy 82.55 63.5)
 		)
 		(stroke
@@ -1824,16 +1814,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 96.52) (xy 154.94 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ef92aeb-f3bb-4386-925c-0d92cc684055")
-	)
-	(wire
-		(pts
 			(xy 57.15 63.5) (xy 54.61 63.5)
 		)
 		(stroke
@@ -1861,26 +1841,6 @@
 			(type default)
 		)
 		(uuid "80ffe61a-f35e-4f30-b7ab-c70902d123dd")
-	)
-	(wire
-		(pts
-			(xy 165.1 101.6) (xy 162.56 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bf04790-aa59-4026-a09a-e64d3d1f4a56")
-	)
-	(wire
-		(pts
-			(xy 165.1 99.06) (xy 162.56 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cf01b9b-83a1-49b7-b9a2-75c223c77293")
 	)
 	(wire
 		(pts
@@ -2013,16 +1973,6 @@
 		(uuid "be9aff69-6126-4e2b-bdb0-cd01f136e48b")
 	)
 	(label "VOUT"
-		(at 154.94 96.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c1fbcf51-2b94-4c44-8ab6-49fd57750d28")
-	)
-	(label "VOUT"
 		(at 119.38 88.9 90)
 		(effects
 			(font
@@ -2076,17 +2026,6 @@
 	)
 	(hierarchical_label "SD"
 		(shape bidirectional)
-		(at 162.56 99.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2944ee1b-b5d1-4017-b32e-42e8d8bc1247")
-	)
-	(hierarchical_label "SD"
-		(shape bidirectional)
 		(at 109.22 68.58 270)
 		(effects
 			(font
@@ -2117,17 +2056,6 @@
 			(justify right)
 		)
 		(uuid "a0112c3c-488f-407d-b65c-89f6184f65f8")
-	)
-	(hierarchical_label "SC"
-		(shape bidirectional)
-		(at 162.56 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a54edecd-afe1-47a8-a6fb-d5f7c1611898")
 	)
 	(hierarchical_label "SC"
 		(shape bidirectional)
@@ -2252,98 +2180,6 @@
 				)
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/d83180ba-0290-4462-afbc-e9fc8e1dead5"
 					(reference "F801")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 162.56 93.98 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "06b53461-8c5d-4812-949c-c2f1e8133acd")
-		(property "Reference" "#PWR0450"
-			(at 163.83 87.376 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 160.782 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "959e075c-b799-4204-9609-e95227849e20")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/01913586-b5a4-43b7-a2b4-e3910dba61a2"
-					(reference "#PWR0450")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/1618c374-89f3-4e9d-8ca0-6558c8d8c4cf"
-					(reference "#PWR0454")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/2067a969-7e53-4e17-9ef1-9d7eac99853f"
-					(reference "#PWR0451")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/2dba6acc-60e0-4a5c-a7f7-6ec27b20a0d0"
-					(reference "#PWR0453")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/64dcc85f-8291-40df-83af-99dc5eff710f"
-					(reference "#PWR0455")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/67aa9fc4-c29a-4936-8c94-ede152d32dff"
-					(reference "#PWR0452")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/b4e4ff4f-4045-4047-bf5a-d51cd16e976c"
-					(reference "#PWR0456")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/d83180ba-0290-4462-afbc-e9fc8e1dead5"
-					(reference "#PWR0457")
 					(unit 1)
 				)
 			)
@@ -2914,107 +2750,6 @@
 				)
 				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/d83180ba-0290-4462-afbc-e9fc8e1dead5"
 					(reference "JP802")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 170.18 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "89c40f23-1894-44d0-93bc-ad0eb512ebdf")
-		(property "Reference" "J102"
-			(at 174.498 94.996 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "I2C header"
-			(at 177.292 98.044 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 170.18 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dab3e7d3-c9e3-4ad3-8d81-5cae2c62bca6")
-		)
-		(pin "2"
-			(uuid "4279f9bb-261c-4c1c-8b6e-5f9dacbe617b")
-		)
-		(pin "3"
-			(uuid "004f84dd-fa1c-4d3e-a0d3-c6ac3c2a6850")
-		)
-		(pin "4"
-			(uuid "c994ecdd-ffff-40e8-87bd-c01fb446720f")
-		)
-		(instances
-			(project "i2c-mux-hat"
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/01913586-b5a4-43b7-a2b4-e3910dba61a2"
-					(reference "J102")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/1618c374-89f3-4e9d-8ca0-6558c8d8c4cf"
-					(reference "J502")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/2067a969-7e53-4e17-9ef1-9d7eac99853f"
-					(reference "J202")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/2dba6acc-60e0-4a5c-a7f7-6ec27b20a0d0"
-					(reference "J402")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/64dcc85f-8291-40df-83af-99dc5eff710f"
-					(reference "J602")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/67aa9fc4-c29a-4936-8c94-ede152d32dff"
-					(reference "J302")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/b4e4ff4f-4045-4047-bf5a-d51cd16e976c"
-					(reference "J702")
-					(unit 1)
-				)
-				(path "/fcfb2e7e-0aee-472c-bd59-76100d28a407/d83180ba-0290-4462-afbc-e9fc8e1dead5"
-					(reference "J802")
 					(unit 1)
 				)
 			)
