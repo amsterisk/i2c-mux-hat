@@ -1680,7 +1680,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "J01 JST XH (B4B-XH-A) pinout:\n  1 GND, 2 V, 3 SDA, 4 SCL\nHDMI DDC cable (channel at 5 V): 1->17 (+20), 2->18, 3->16, 4->15."
+	(text "J01 JST XH (B4B-XH-A) pinout (Grove order):\n  1 SCL, 2 SDA, 3 V, 4 GND\nHDMI DDC cable (channel at 5 V): 1->15, 2->16, 3->18, 4->17 (+20)."
 		(exclude_from_sim no)
 		(at 50.8 118 0)
 		(effects
@@ -1704,7 +1704,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 63.5) (xy 153.67 63.5)
+			(xy 165.1 66.04) (xy 153.67 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1804,7 +1804,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 66.04) (xy 162.56 66.04)
+			(xy 165.1 63.5) (xy 162.56 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1874,7 +1874,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 68.58) (xy 162.56 68.58)
+			(xy 165.1 60.96) (xy 162.56 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1884,7 +1884,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 60.96) (xy 162.56 60.96)
+			(xy 165.1 68.58) (xy 162.56 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1963,7 +1963,7 @@
 		(uuid "ac0a46c6-828f-460a-a640-32a34cc9c185")
 	)
 	(label "VOUT"
-		(at 153.67 63.5 180)
+		(at 153.67 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2004,7 +2004,7 @@
 	)
 	(hierarchical_label "SD"
 		(shape bidirectional)
-		(at 162.56 66.04 180)
+		(at 162.56 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2048,7 +2048,7 @@
 	)
 	(hierarchical_label "SC"
 		(shape bidirectional)
-		(at 162.56 68.58 180)
+		(at 162.56 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2852,7 +2852,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 60.96 270)
+		(at 162.56 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2860,7 +2860,7 @@
 		(dnp no)
 		(uuid "a6cf2895-7803-4093-a64d-ffd92e0c7293")
 		(property "Reference" "#PWR0440"
-			(at 163.576 54.61 0)
+			(at 163.576 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2868,7 +2868,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 161.036 57.404 0)
+			(at 161.036 65.024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2876,7 +2876,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 60.96 0)
+			(at 162.56 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2885,7 +2885,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 60.96 0)
+			(at 162.56 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2894,7 +2894,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 162.56 60.96 0)
+			(at 162.56 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)

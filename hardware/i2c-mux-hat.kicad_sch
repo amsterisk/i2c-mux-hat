@@ -6755,7 +6755,7 @@
 				)
 			)
 		)
-		(property "Value" "Host 40-pin"
+		(property "Value" "2x20 stacking header"
 			(at 53.3 90.4 0)
 			(effects
 				(font

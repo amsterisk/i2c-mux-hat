@@ -3,7 +3,7 @@
 An open-hardware 8-channel I2C multiplexer board for single-board computers with a
 Raspberry Pi-compatible 40-pin header (Raspberry Pi, Orange Pi, Banana Pi, ...).
 
-Status: **work in progress** — schematic done (ERC clean), PCB placed, routing not started.
+Status: **work in progress** — schematic done (ERC clean), PCB routed (DRC clean), not yet reviewed or fabricated.
 
 ## Features
 
@@ -16,6 +16,7 @@ Status: **work in progress** — schematic done (ERC clean), PCB placed, routing
 - Per-channel resettable fuse on connector power and ESD clamp (USBLC6-2SC6) on SDA/SCL/V.
 - Optional mux reset from GPIO4 (solder jumper).
 - HAT form factor, 65 × 56.5 mm (no ID EEPROM; pins 27/28 unused).
+- **2×20 stacking header**: all 40 pins pass through to another board above.
 
 Example use: DDC/CI control of monitors (input switching, brightness) over HDMI's DDC lines,
 with one channel per monitor — every monitor answers on the same addresses (0x37/0x50), so
@@ -23,23 +24,23 @@ each needs its own bus.
 
 ## Connector pinout
 
-JST XH (J*x*01):
+JST XH (J*x*01), Grove pin order:
 
 | Pin | Signal |
 |---|---|
-| 1 | GND |
-| 2 | V (3.3 or 5 V, per channel jumper) |
-| 3 | SDA |
-| 4 | SCL |
+| 1 | SCL |
+| 2 | SDA |
+| 3 | V (3.3 or 5 V, per channel jumper) |
+| 4 | GND |
 
 ### JST XH → HDMI (DDC) cable
 
 | XH pin | HDMI pin |
 |---|---|
-| 1 GND | 17 (bridge to 20 / shell) |
-| 2 V | 18 (+5 V) |
-| 3 SDA | 16 |
-| 4 SCL | 15 |
+| 1 SCL | 15 |
+| 2 SDA | 16 |
+| 3 V | 18 (+5 V) |
+| 4 GND | 17 (bridge to 20 / shell) |
 
 Set that channel to **5 V**. Leave all other HDMI pins unconnected.
 
@@ -51,6 +52,15 @@ Set that channel to **5 V**. Leave all other HDMI pins unconnected.
 | JPx02 (solder) | bridged | Channel x pull-ups; cut to remove |
 | JP1 (solder) | open | Bridge to connect mux ~RESET to GPIO4 (pin 7) |
 | JP2–JP4 (solder) | GND | Address A0–A2; move to 3V3 for 0x71–0x77 |
+
+## Stacking
+
+J1 is a 2×20 stacking header (female, long pins through the board), so every GPIO passes
+through. A board above can share I2C (pins 3/5) as long as it avoids addresses 0x70–0x77
+(or move this board's address with JP2–JP4); GPIO4 is only used if JP1 is bridged; pins
+27/28 are free for the upper board's ID EEPROM. Mechanically, the vertical XH plugs and
+their cables exit upwards, so a board above needs a tall spacer (about 20 mm or more);
+otherwise put this board at the top of the stack.
 
 ## Software
 
